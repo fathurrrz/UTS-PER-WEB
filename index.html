@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Fathurrahman Hidayat</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro:400,700" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  </head>
+  <body>
+    <i class="icon-menu burger-button" id="burger-menu"></i>
+    <header class="header">
+      <div class="wrapper">
+        <figure class="logo"><img src="./images/fr.png" width="80" height="80" alt="Logo Sebastian Garcia"></figure>
+        <nav class="menu">
+            <ol>
+              <li><a class="link" href="#pengalaman">Pengalaman</a></li>
+              <li><a class="link" href="#portfolio">Portofolio</a></li>
+              <li><a class="link contact-button" href="#contact">Contact</a></li>
+            </ol>
+        </nav>
+      </div>
+    </header>
+    <section id="aboutme" class="aboutme">
+      <div class="wrapper">
+        <h1>Hai,saya  <strong>Fathurrahman Hidayat</strong>, <br> Selamat datang di <strong>Portofolio saya</strong>.</h1>
+        <img class="aboutme-image" width="264" height="330" src="./images/aku.jpg" alt="Sebastián">
+      </div>
+    </section>
+    <section id="portfolio" class="portfolio">
+      <div class="wrapper">
+        <h2>Portofolio</h2>
+        <article class="project">
+          <div class="project-content">
+            <h3 class="project-tittle">Nama : Fathurrahman Hidayat.</h3>
+            <h3 class="project-tittle">Tempat tanggal lahir : Sibolga,1 April 2002</h3>
+            <h3 class="project-tittle">ALamat : Jalan Suprapto No 83B Sibolga Sumatera utara</h3>
+            <h3 class="project-tittle">Hobi : Futsal</h3>
+            <h3 class="project-tittle">Status : Lajang</h3>
+           
+          </div>
+          <figure class="project-imageWrapper">
+            <img class="project-image" src="./images/saya.jpg" width="480" > 
+          </figure>
+        </article>
+      </div>
+    </section>
+    <div class="wrapper">
+      <h2 id="pengalaman" class="event-header">Pengalaman</h2>
+    </div>
+    <section  class="event-list">
+      <div class="wrapper">
+        <article class="event">
+          <figure class="event-imageWrapper"><img class="event-image" src="./images/aku.jpg" alt="Evento 1"></figure>
+          <div class="event-content">
+            <h3 class="event-title">Festival Musik</h3>
+            <p class="event-description">pada tahun 2020 tanggal 21 April saya mengikuti sebuah ajang festival band di sibolga, sumatera utara. pada ajang festival tersebut
+              saya mendapatkan Juara 2 dalam festival musik band 2020 di Sibolga Sumatera Utara tersebut </p>
+            
+          </div>
+        </article>
+        <article class="event">
+          <figure class="event-imageWrapper"><img class="event-image" src="./images/drum.jpg" alt="Evento 1"></figure>
+          <div class="event-content">
+            <h3 class="event-title">Kontes Drum</h3>
+            <p class="event-description"> Pada tahun 2021 saya mengikuti kontes drum dalam sebuah event di sibolga,sumatera utara. pada kontes tersebut saya hanya dapat drummer favorit.</p>
+          
+          </div>
+        </article>
+       </div>
+    </section>
+    <section id="contact" class="contact">
+      <div class="wrapper">
+        <form action="" class="form-email">
+            <h3>Contact</h3>
+          
+        </form>
+        <div class="social">
+          <a href="https://www.instagram.com/turrrh/" class="social-link instagram">/</a>
+          
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="wrapper">
+        
+      </div>
+    </footer>
+    <script>
+      const ipad = window.matchMedia('screen and (max-width: 767px)');  
+      const menu = document.querySelector('.menu');
+      const burgerButton = document.querySelector('#burger-menu');
+
+      ipad.addListener(validation);
+
+      function validation(event){
+        if (event.matches){
+          burgerButton.addEventListener('click', hideShow);
+        }else{
+          burgerButton.removeEventListener('click', hideShow);
+        }
+      }
+      validation(ipad);
+      function hideShow(){
+        if (menu.classList.contains('is-active')){
+        menu.classList.remove('is-active');
+        }else{
+        menu.classList.add('is-active');
+        }
+      }
+    </script>
+  </body>
+</html>
